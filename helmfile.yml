@@ -1,0 +1,29 @@
+helmDefaults:
+  createNamespace: true
+
+repositories:
+  - name: prometheus-community
+    url: https://prometheus-community.github.io/helm-charts
+  - name: grafana
+    url: https://grafana.github.io/helm-charts
+  - name: ingress-nginx
+    url: https://kubernetes.github.io/ingress-nginx
+
+releases:
+  - name: prometheus
+    namespace: monitoring
+    chart: prometheus-community/prometheus
+    values:
+      - values/prometheus/values.yml
+  
+  - name: grafana
+    namespace: monitoring
+    chart: grafana/grafana
+    values:
+      - values/grafana/values.yml
+
+  - name: ingress-nginx
+    namespace: nginx
+    chart: ingress-nginx/ingress-nginx
+    values:
+      - values/ingress-nginx/values.yml
