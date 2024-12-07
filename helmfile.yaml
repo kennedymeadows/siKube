@@ -14,16 +14,16 @@ releases:
     namespace: monitoring
     chart: prometheus-community/prometheus
     values:
-      - values/prometheus/values.yml
+      - values/prometheus/values.yaml
   
   - name: grafana
     namespace: monitoring
     chart: grafana/grafana
     values:
-      - values/grafana/values.yml
+      - values/grafana/values.yaml
 
   - name: ingres-nginx
     namespace: nginx
     chart: ingress-nginx/ingress-nginx
     values:
-      - values/ingress-nginx/values.yml
+      - values/ingress-nginx/values.yaml
