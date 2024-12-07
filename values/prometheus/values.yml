@@ -3,7 +3,7 @@ server:
     enabled: true
     hosts:
       - prometheus.local
-  persistence:
+  persistentVolume:
     enabled: true
     storageClass: "local-path"
     accessModes:
