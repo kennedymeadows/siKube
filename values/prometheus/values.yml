@@ -3,3 +3,9 @@ server:
     enabled: true
     hosts:
       - prometheus.local
+  persistence:
+    enabled: true
+    storageClass: "local-path"
+    accessModes:
+      - ReadWriteOnce
+    size: 10Gi

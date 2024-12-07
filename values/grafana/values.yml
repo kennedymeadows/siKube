@@ -2,3 +2,9 @@ ingress:
   enabled: true
   hosts:
     - grafana.local
+persistence:
+  enabled: true
+  storageClassName: "local-path"
+  accessModes:
+    - ReadWriteOnce
+  size: 5Gi
