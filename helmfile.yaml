@@ -22,7 +22,7 @@ releases:
     values:
       - values/grafana/values.yml
 
-  - name: ingress-nginx
+  - name: ingres-nginx
     namespace: nginx
     chart: ingress-nginx/ingress-nginx
     values:
